@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>웹툰 모아보기</title>
+    </head>
+    <body>
+        <h2>여기는 {{ cat }} 웹툰입니다</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><font color = "blue">썸네일</font></th>
+                    <th><font color = "blue">웹툰 제목</font></th>
+                    <th><font color = "blue">웹툰 링크</font></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for toon in t: %}
+                <tr>
+                    <td><img src={{ toon['img_url'] }}></td>
+                    <td><div style="text-align:center">{{ toon['title'] }}</div></td>
+                    <td><a target="_blank" rel="noopener noreferrer" href="{{ toon['url'] }}">보러 가기</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

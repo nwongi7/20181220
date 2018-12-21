@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>환율 모아보기</title>
+    </head>
+    <body>
+        <h2> {{ n }} 종류의 환율입니다</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><font color = "blue">항목</font></th>
+                    <th><font color = "blue">환율</font></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ls in excs: %}
+                <tr>
+                    <td>{{ ls["nation"] }}</td>
+                    <td>{{ ls["value"] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
